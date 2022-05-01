@@ -6,7 +6,7 @@
 
 </div>
 
-**Descrição**
+#### :computer: Descrição
 
 Tela de desenho usando pixels com uma paleta de cores aleatória
 
@@ -17,10 +17,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [HTML5][html]
 - [CSS3][css]
 - [Javascript][js]
+- [TailwindCSS][tail]
 
 [html]: https://developer.mozilla.org/pt-BR/docs/Web/HTML
 [css]: https://developer.mozilla.org/pt-BR/docs/Web/CSS
 [js]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+[tail]: https://tailwindcss.com/
+
+#### :star2: Habilidades
+
+- Manipular o DOM
+- Manipular o Javascript
 
 #### :thinking: Como rodar
 
