@@ -37,7 +37,7 @@
       </div>
     </header>
 
-    <section id="board" class="section-board">
+    <section id="board" class="section-board mx-auto w-1/2 mt-4">
       <ul id="pixel-board" class="pixel-board">
         <div class="line">
           <li class="pixel"></li>
@@ -83,21 +83,7 @@
         <li class="color" id="random-color-3"></li>
       </ul> -->
 
-      <div id="line-button">
-        <span>Lines: </span>
-        <input
-          type="number"
-          name="board-size"
-          id="board-size"
-          class="board-size"
-          min="1"
-          max="12"
-          maxlength="15"
-        />
-        <button id="generate-board" class="button generate-board">VQV</button>
-      </div>
-
-      <button id="clear-board" class="button clear-board">Limpar quadro</button>
+     
     </section>
 
     <div class="flex items-center justify-between mx-auto w-1/2 mt-4">
@@ -105,14 +91,19 @@
         <div class="flex flex-col">
           <label for="lines-button" class="text-xs">Lines</label>
           <input
-            id="lines-button"
             class="rounded-sm border border-black w-16 h-8 p-2"
             type="number"
+            name="board-size"
+            id="board-size"
+            class="board-size"
+            min="1"
+            max="12"
+            maxlength="15"
           ></input>
         </div>
         
 
-        <button class="ml-2 mt-4 w-8 hover:opacity-60">
+        <button class="ml-2 mt-4 w-8 hover:opacity-60" id="generate-board">
           <img src="src/assets//save-icon.png" alt="Botão de salvar">
         </button>
       </div>
@@ -123,7 +114,7 @@
         <p class="text-xs">Color</p>
         <input
           id="lines-button"
-          class="rounded-sm border-black w-10 h-10 hover:cursor-pointer p-0 m-0 -mt-1"
+          class="board-size rounded-sm border-black w-10 h-10 hover:cursor-pointer p-0 m-0 -mt-1"
           type="color"
         ></input>
       </div>
@@ -139,7 +130,7 @@
       </div>
     
       <div>
-        <button class="bg-cyan-400 rounded-sm px-4 py-2 border border-black hover:opacity-75">Limpar</button>
+        <button id="clear-board" class="bg-cyan-400 rounded-sm px-4 py-2 border border-black hover:opacity-75">Limpar</button>
       </div>
     </div>
     <script src="./src/script.js"></script>

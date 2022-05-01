@@ -51,11 +51,11 @@ body {
 }
 
 .section-board {
-  width: 50%;
-  height: 100%;
+  /* width: 50%; */
+  /* height: 100%; */
   overflow: hidden;
   padding: 3rem 0;
-  max-width: 900px;
+  /* max-width: 900px; */
 
   background-color: #fff;
 

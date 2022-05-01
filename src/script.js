@@ -97,7 +97,7 @@ function drawPixels(input) {
   }
 }
 
-function drawPicture() {
+function drawBoard() {
   const generateBoardButton = document.getElementById('generate-board');
   const lineInput = document.getElementById('board-size');
 
@@ -105,7 +105,7 @@ function drawPicture() {
 }
 
 function setInputValue() {
-  const inputElement = document.querySelector('.board-size');
+  const inputElement = document.getElementById('board-size');
 
   inputElement.value = 8;
 
@@ -125,6 +125,6 @@ window.onload = () => {
   selectColor();
   drawColor();
   clearButton();
-  drawPicture();
+  drawBoard();
   setInputValue();
 };
