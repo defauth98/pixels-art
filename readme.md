@@ -6,6 +6,10 @@
 
 </div>
 
+<p align="center">
+  <img alt="Version" src="./.github/pixels-art.gif" width="=800rem" />
+</p>
+
 #### :computer: Descrição
 
 Tela de desenho usando pixels com uma paleta de cores aleatória
