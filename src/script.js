@@ -1,3 +1,6 @@
+let colorPicker = null
+
+
 function genRandomColor() {
   const redValue = (Math.random() * 255).toFixed();
   const greenValue = (Math.random() * 255).toFixed();
@@ -7,10 +10,14 @@ function genRandomColor() {
 }
 
 function selectColor() {
+  
+
   const listItemElements = document.getElementsByClassName('color');
 
   for (let index = 0; index < listItemElements.length; index += 1) {
     listItemElements[index].addEventListener('click', () => {
+      colorPicker = null
+      
       for (
         let insideIndex = 0;
         insideIndex < listItemElements.length;
@@ -26,10 +33,14 @@ function selectColor() {
 
 function setBackground(element) {
   const pixelElement = element;
-  const selectElement = document.getElementsByClassName('selected')[0];
 
-  pixelElement.style.backgroundColor = selectElement.style.backgroundColor;
+  if(!colorPicker) {
+    const selectElement = document.getElementsByClassName('selected')[0];
 
+    pixelElement.style.backgroundColor = selectElement.style.backgroundColor;
+  } else {
+    pixelElement.style.backgroundColor = colorPicker;
+  }
   return pixelElement;
 }
 
@@ -112,6 +123,15 @@ function setInputValue() {
   drawPixels(inputElement);
 }
 
+
+function getColorFromInputColor() {
+  const colorPickerInput = document.getElementById('color-picker-input')
+
+  colorPickerInput.addEventListener('change', (event) => {
+    colorPicker = event.target.value
+  })
+}
+
 window.onload = () => {
   const randomColor1Element = document.getElementById('random-color-1');
   randomColor1Element.style.backgroundColor = genRandomColor();
@@ -127,4 +147,5 @@ window.onload = () => {
   clearButton();
   drawBoard();
   setInputValue();
+  getColorFromInputColor()
 };
