@@ -76,12 +76,12 @@
         </div>
       </ul>
 
-      <ul class="color-palette">
+      <!-- <ul class="color-palette">
         <li class="color selected" id="background-black"></li>
         <li class="color" id="random-color-1"></li>
         <li class="color" id="random-color-2"></li>
         <li class="color" id="random-color-3"></li>
-      </ul>
+      </ul> -->
 
       <div id="line-button">
         <span>Lines: </span>
@@ -100,10 +100,46 @@
       <button id="clear-board" class="button clear-board">Limpar quadro</button>
     </section>
 
-    <div class="flex items-center justify-between mx-auto w-1/2 bg-blue-700">
+    <div class="flex items-center justify-between mx-auto w-1/2 mt-4">
+      <div class="flex flex-row"> 
+        <div class="flex flex-col">
+          <label for="lines-button" class="text-xs">Lines</label>
+          <input
+            id="lines-button"
+            class="rounded-sm border border-black w-16 h-8 p-2"
+            type="number"
+          ></input>
+        </div>
+        
+
+        <button class="ml-2 mt-4 w-8 hover:opacity-60">
+          <img src="src/assets//save-icon.png" alt="Botão de salvar">
+        </button>
+      </div>
+
+      
+
+      <div class="flex flex-col">
+        <p class="text-xs">Color</p>
+        <input
+          id="lines-button"
+          class="rounded-sm border-black w-10 h-10 hover:cursor-pointer p-0 m-0 -mt-1"
+          type="color"
+        ></input>
+      </div>
+
+      <div class="-mt-3">
+        <label for="lines-button" class="text-xs">Random colors</label>
+        <ul class="color-palette">
+          <li class="color w-8 h-8 selected" id="background-black"></li>
+          <li class="color w-8 h-8" id="random-color-1"></li>
+          <li class="color w-8 h-8" id="random-color-2"></li>
+          <li class="color w-8 h-8" id="random-color-3"></li>
+        </ul>
+      </div>
+    
       <div>
-        <label for="lines-button">Lines</label>
-        <button id="lines-button" class=""></button>
+        <button class="bg-cyan-400 rounded-sm px-4 py-2 border border-black hover:opacity-75">Limpar</button>
       </div>
     </div>
     <script src="./src/script.js"></script>
